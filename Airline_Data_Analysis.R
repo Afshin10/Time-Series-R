@@ -45,7 +45,6 @@ model_fit_prophet <- prophet_reg() %>%
   set_engine(engine = "prophet") %>%
   fit(passengers ~ date, data = training(splits))
 
-#2. Compare RMSE scores on test set; 
 #Step 3 - Add fitted models to a Model Table.----
 
 models_tbl <- modeltime_table(
